@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ url: blob.url });
   } catch (error) {
     return NextResponse.json(
-      { error: "Failed to upload image" },
+      { error: `Failed to upload image: ${error}` },
       { status: 500 }
     );
   }
